@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+    background-color: aqua;
+    background: linear-gradient(to right, #ff9966, #ff5e62, #ff9933);
+}
+#page-container {
+	display: flex;
+	flex-wrap: nowrap;
+  }
+  #chocolates-container {
+	flex: 1;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+  }
+
+  #chocolates {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	box-sizing: border-box;
+	background-color: rgb(200, 250, 243);
+	border-radius: 10px;
+	box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+	animation: slide-in 1s ease-in-out;
+  }
+  
+  #chocolates.chocolate {
+	margin-bottom: 20px;
+	width: calc(33.333% - 20px);
+	height: 200px;
+	border-radius: 10px;
+	box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+	transition: transform 0.3s, box-shadow 0.3s;
+	cursor: pointer;
+	margin: 500px;
+  }
+  #chocolates.chocolate:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  #chocolates.chocolate img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+  }
+  #chocolates.chocolate h2 {
+	margin-top: 10px;
+	color: #4CAF50;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+.chocolate img {
+	width: 50%;
+	height: 50%;
+	object-fit: contain;
+}
+
+.chocolate:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chocolate img {
+    width: 200px; /* Set the width of the image */
+    height: 200px; /* Set the height of the image */
+    object-fit: cover; /* This will ensure that the image is not distorted */
+  }
+
+
+.chocolate h2 {
+	margin-top: 10pxx 
+}
+#chocolates.chocolate:nth-child(2) {
+	animation: bounce 2s ease-in-out infinite;
+	background-color: #ff9966;
+  }
+  #chocolates.chocolate:nth-child(3) {
+	animation: bounce 2s ease-in-out infinite;
+	animation-delay: 0.5s;
+	background-color: #ff5e62;
+  }
+  #chocolates.chocolate:nth-child(4) {
+	animation: bounce 2s ease-in-out infinite;
+	animation-delay: 1s;
+	background-color: #ff9933;
+  }
+#cart-sidebar {
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 200px;
+	height: 100%;
+	border-left: 1px solid #ccc;
+  }
+
+
+.add {
+	background-color: #4CAF50;
+	color: white;
+	padding: 5px 10px;
+	border: none;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	transition: background-color 0.3s;
+}
+
+.add:hover {
+	background-color: #3e8e41;
+}
+
+#selected {
+	margin-top: 30px;
+	border: 1px solid #ccc;
+	padding: 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	animation: slide-in 1s ease-in-out;
+}
+
+#selected-chocolates {
+	list-style-type: none;
+}
+
+#selected-chocolates li {
+	margin-bottom: 10px;
+}
+
+@keyframes slide-in {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+	  transform: translateY(0);
+	}
+	40% {
+	  transform: translateY(-10px);
+	}
+	60% {
+	  transform: translateY(-5px);
+	}
+  }
+#cart {
+	animation: slide-in 1s ease-in-out;
+}
+
+h1 {
+	animation: slide-in 1s ease-in-out;
+}
+
+p {
+	animation: slide-in 1s ease-in-out;
+}
+
+@keyframes slide-in {
+	from {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
